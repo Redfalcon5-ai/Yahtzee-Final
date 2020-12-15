@@ -1,5 +1,5 @@
 import java.util.*;
-public class Calculations //make sure that this is a subclass of Dice and inherits all of the properties of Dice 
+public class Calculations extends Dice
 {
     /*Initialize all of the following instance variables
     You need 12 private integers with the following variable names
@@ -11,7 +11,25 @@ public class Calculations //make sure that this is a subclass of Dice and inheri
     Lastly you will need 4 booleans with the following variable names:
     smStraight, lgStraight, fullHouse, & yahtzee
     Set all of the booleans to false.*/
-    
+    private int ones = 0;
+    private int twos = 0;
+    private int threes = 0;
+    private int fours = 0;
+    private int fives = 0;
+    private int sixes = 0;
+    private int chance = 0;
+    private int threeKind = 0;
+    private int fourKind = 0;
+    private int sumAll = 0;
+    private int sameNum = 0;
+    private int maxSame = 0;
+    private int numSame = 0;
+    private String tempSS;
+    private String smS;
+    private boolean smStraight = false;
+    private boolean lgStraight = false;
+    private boolean fullHouse = false;
+    private bolean yahtzee = false;
  
     
     public int countSame()
@@ -26,6 +44,98 @@ public class Calculations //make sure that this is a subclass of Dice and inheri
         and numSame (the number that appears the most times)
         Think about the coin flip tracker exercise*/
         // return the variable maxSame
+        if(d1 == 1) {
+            ones++;
+        } else if(d1 == 2) {
+            twos++;
+        } else if(d1 == 3) {
+            threes++;
+        } else if(d1 == 4) {
+            fours++;
+        } else if(d1 == 5) {
+            fives++;
+        } else if(d1 == 6) {
+            sixes++;
+        }
+        if(d2 == 1) {
+            ones++;
+        } else if(d2 == 2) {
+            twos++;
+        } else if(d2 == 3) {
+            threes++;
+        } else if(d2 == 4) {
+            fours++;
+        } else if(d2 == 5) {
+            fives++;
+        } else if(d2 == 6) {
+            sixes++;
+        }
+        if(d3 == 1) {
+            ones++;
+        } else if(d3 == 2) {
+            twos++;
+        } else if(d3 == 3) {
+            threes++;
+        } else if(d3 == 4) {
+            fours++;
+        } else if(d3 == 5) {
+            fives++;
+        } else if(d3 == 6) {
+            sixes++;
+        }
+        if(d4 == 1) {
+            ones++;
+        } else if(d4 == 2) {
+            twos++;
+        } else if(d4 == 3) {
+            threes++;
+        } else if(d4 == 4) {
+            fours++;
+        } else if(d4 == 5) {
+            fives++;
+        } else if(d4 == 6) {
+            sixes++;
+        }
+        if(d5 == 1) {
+            ones++;
+        } else if(d5 == 2) {
+            twos++;
+        } else if(d5 == 3) {
+            threes++;
+        } else if(d5 == 4) {
+            fours++;
+        } else if(d5 == 5) {
+            fives++;
+        } else if(d5 == 6) {
+            sixes++;
+        }
+        
+        if(ones > twos && ones > threes && ones > fours && ones > fives && ones > sixes) {
+            maxSame = ones;
+            numSame = 1;
+        }
+        if(twos > ones && twos > threes && twos > fours && twos > fives && twos > sixes) {
+            maxSame = twos;
+            numSame = 2;
+        }
+        if(threes > ones && threes > twos && threes > fours && threes > fives && threes > sixes) {
+            maxSame = threes;
+            numSame = 3;
+        }
+        if(fours > ones && fours > twos &&  fours > threes && fours > fives && fours > sixes) {
+            maxSame = fours;
+            numSame = 4;
+        }
+        if(fives > ones && fives > twos &&  fives > three && fives > four && fives > sixes) {
+            maxSame = fives;
+            numSame = 5;
+        }
+        if(sixes > ones && sixes > twos &&  sixes > three && sixes > four && sixes > fives) {
+            maxSame = sixes;
+            numSame = 6;
+        }
+        
+        return maxSame;
     }
     
     public int numMaxSame(){
