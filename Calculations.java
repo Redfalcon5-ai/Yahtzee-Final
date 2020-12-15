@@ -1,5 +1,5 @@
 import java.util.*;
-public class Calculations //make sure that this is a subclass of Dice and inherits all of the properties of Dice 
+public class Calculations extends Dice
 {
     /*Initialize all of the following instance variables
     You need 12 private integers with the following variable names
