@@ -30,6 +30,20 @@ public class Calculations extends Dice
     private boolean lgStraight = false;
     private boolean fullHouse = false;
     private bolean yahtzee = false;
+   
+    private int t1 = d1;
+    private int t2 = d2;
+    private int t3 = d3;
+    private int t4 = d4;
+    private int t5 = d5;
+    
+    private String temp1 = Integer.toString(t1);
+    private String temp2 = Integer.toString(t2);
+    private String temp3 = Integer.toString(t3);
+    private String temp4 = Integer.toString(t4);
+    private String temp5 = Integer.toString(t5);
+    
+    private String full = temp1 + temp2 + temp3 + temp4 + temp5;
  
     
     public int countSame()
@@ -160,6 +174,36 @@ public class Calculations extends Dice
          // you will use the variables tempSS and smS in this method
          //you will return the String valuse of smS
         */
+        String first = temp1 + temp2 + temp3 + temp4 + temp5;
+        String second = "";
+        
+        if(first.contains("1") == true){
+            second = second + '1';
+        }
+        
+        if(first.contains("2") == true){
+            second = second + '2';
+        }
+        
+        if(first.contains("3") == true){
+            second = second + '3';
+        }
+        
+        if(first.contains("4") == true){
+            second = second + '4';
+        }
+        
+        if(first.contains("5") == true){
+            second = second + '5';
+        }
+        
+        if(first.contains("6") == true){
+            second = second + '6';
+        }
+        
+        smS = second;
+        
+        return smS;
     
     public boolean SmStraight()
     {   
@@ -168,6 +212,19 @@ public class Calculations extends Dice
         and compare it to all of the small straight options
         and if it meets one of those small straight options 
         it should return true for the variable smStraight*/
+        if(full.contains("1234")) {
+            smStraight = true;
+        }
+        
+        if(full.contains("2345")) {
+            smStraight = true;
+        }
+        
+        if(full.contain("3456")) {
+            smStraight = true;
+        }
+        
+        return smStraight;
     }
     public boolean LgStraight()
     {
@@ -176,6 +233,15 @@ public class Calculations extends Dice
         and compare it to all of the Large straight options
         and if it meets one of those Large straight options 
         it should return true for the variable lgStraight*/
+        if(full.contains("12345")) {
+            lgStraight = true;
+        }
+        
+        if(full.contains("23456")) {
+            lgStraight = true;
+        }
+        
+        return lgStraight;
     }
     public boolean FullHouseCheck()
     {
