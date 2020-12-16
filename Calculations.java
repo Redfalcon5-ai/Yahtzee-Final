@@ -29,7 +29,7 @@ public class Calculations extends Dice
     private boolean smStraight = false;
     private boolean lgStraight = false;
     private boolean fullHouse = false;
-    private bolean yahtzee = false;
+    private boolean yahtzee = false;
    
     private int t1 = d1;
     private int t2 = d2;
@@ -495,6 +495,25 @@ public class Calculations extends Dice
         and and your booleans back to false 
         and all of your Strings back to ""*/
         //This should return the String "Next Turn"
+        ones = 0;
+        twos = 0;
+        threes = 0;
+        fours = 0;
+        fives = 0;
+        sixes = 0;
+        chance = 0;
+        threeKind = 0;
+        fourKind = 0;
+        sumAll = 0;
+        sameNum = 0;
+        maxSame = 0;
+        numSame = 0;
+        smS = "";
+        smStraight = false;
+        lgStraight = false;
+        fullHouse = false;
+        yahtzee = false;
         
+        return "Next Turn";
     }
 }
