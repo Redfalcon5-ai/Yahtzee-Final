@@ -260,6 +260,31 @@ public class Calculations extends Dice
         them to each other in the right order, you should be able to determine
         if the roll is a yahtzee.*/
         //You should return the boolean yahtzee
+        if(full.contains("11111")) {
+            yahtzee = true;
+        }
+        
+        if(full.contains("22222")) {
+            yahtzee = true;
+        }
+        
+        if(full.contains("33333")) {
+            yahtzee = true;
+        }
+        
+        if(full.contains("44444")) {
+            yahtzee = true;
+        }
+        
+        if(full.contains("55555")) {
+            yahtzee = true;
+        }
+        
+        if(full.contains("66666")) {
+            yahtzee = true;
+        }
+        
+        return yahtzee;
     }
     public int SumAll()
     {
