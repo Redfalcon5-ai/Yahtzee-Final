@@ -156,11 +156,11 @@ public class Dice  //this is the superClass at the top of the heiarchy
     
     public String toString()
     {
-        return "dice 1: " + d1 +
-               \n "dice 2: " + d2 +
-               \n "dice 3: " + d3 +
-               \n "dice 4: " + d4 +
-               \n "dice 5: " + d5 ; 
+        return "dice 1: " + d1 \n +
+               "dice 2: " + d2 \n +
+               "dice 3: " + d3 \n +
+               "dice 4: " + d4 \n +
+               "dice 5: " + d5 ; 
     }
     
 }
