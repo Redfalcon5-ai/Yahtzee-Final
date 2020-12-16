@@ -291,7 +291,10 @@ public class Calculations extends Dice
         /*This method should add all of the dice together so that 
         it can return the correct points when the score requires all of 
         the dice to be added up. (chance, 3 of a Kind, 4 of a Kind,)*/
-        //return int sumAll.        
+        //return int sumAll.      
+        sumAll = t1 + t2 + t3 + t4 + t5;
+        
+        return sumAll;
     }
     public int getOnes()
     {
@@ -299,6 +302,26 @@ public class Calculations extends Dice
         You should structure this method to check each dice and see if it is a 1, 
         and if it is you should add 1 to the ones variable.*/
         // You should return the int ones
+        if(t1 == 1) {
+            ones++;
+        }
+        
+        if(t2 == 1) {
+            ones++;
+        }
+        
+        if(t3 == 1) {
+            ones++;
+        }
+        
+        if(t4 == 1) {
+            ones++;
+        }
+        
+        if(t5 == 1) {
+            ones++
+        }
+        return ones;
     }
     public int getTwos()
     {
@@ -306,6 +329,26 @@ public class Calculations extends Dice
         You should structure this method to check each dice and see if it is a 2, 
         and if it is you should add 2 to the twos variable.*/
         // You should return the int twos
+        if(t1 == 2) {
+            twos++;
+        }
+        
+        if(t2 == 2) {
+            twos++;
+        }
+        
+        if(t3 == 2) {
+            twos++;
+        }
+        
+        if(t4 == 2) {
+            twos++;
+        }
+        
+        if(t5 == 2) {
+            twos++
+        }
+        return twos * 2;
     }
     public int getThrees()
     {
@@ -313,6 +356,26 @@ public class Calculations extends Dice
         You should structure this method to check each dice and see if it is a 3, 
         and if it is you should add 3 to the threes variable.*/
         // You should return the int threes
+        if(t1 == 3) {
+            threes++;
+        }
+        
+        if(t2 == 3) {
+            threes++;
+        }
+        
+        if(t3 == 3) {
+            threes++;
+        }
+        
+        if(t4 == 3) {
+            threes++;
+        }
+        
+        if(t5 == 3) {
+            threes++
+        }
+        return threes * 3;
     }
     
     public int getFours()
@@ -321,6 +384,26 @@ public class Calculations extends Dice
         You should structure this method to check each dice and see if it is a 4, 
         and if it is you should add 4 to the Fours variable.*/
         // You should return the int Fours
+        if(t1 == 4) {
+            fours++;
+        }
+        
+        if(t2 == 4) {
+            fours++;
+        }
+        
+        if(t3 == 4) {
+            fours++;
+        }
+        
+        if(t4 == 4) {
+            fours++;
+        }
+        
+        if(t5 == 4) {
+            fours++
+        }
+        return fours * 4;
     }
      public int getFives()
     {
@@ -328,6 +411,26 @@ public class Calculations extends Dice
         You should structure this method to check each dice and see if it is a 5, 
         and if it is you should add 5 to the Fives variable.*/
         // You should return the int Fives
+        if(t1 == 5) {
+            fives++;
+        }
+        
+        if(t2 == 5) {
+            fives++;
+        }
+        
+        if(t3 == 5) {
+            fives++;
+        }
+        
+        if(t4 == 5) {
+            fives++;
+        }
+        
+        if(t5 == 5) {
+            fives++
+        }
+        return fives * 5;
     }
     public int getSixes()
     {
@@ -335,6 +438,26 @@ public class Calculations extends Dice
         You should structure this method to check each dice and see if it is a 6, 
         and if it is you should add 6 to the Sixes variable.*/
         // You should return the int Sixes
+        if(t1 == 6) {
+            sixes++;
+        }
+        
+        if(t2 == 6) {
+            sixes++;
+        }
+        
+        if(t3 == 6) {
+            sixes++;
+        }
+        
+        if(t4 == 6) {
+            sixes++;
+        }
+        
+        if(t5 == 6) {
+            sixes++
+        }
+        return sixes * 6;
     }
     
     public int getChance()
@@ -344,7 +467,7 @@ public class Calculations extends Dice
        misses going for a larger roll and has used up the socores that are in
        their roll so it simply adds up all of the dice and returns that.  luckly
        you already have this done and you simply need to return sumAll*/
-       
+       return SumAll();
     }
     
     public int getThreeKind()
