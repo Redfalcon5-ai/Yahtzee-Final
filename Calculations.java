@@ -141,6 +141,7 @@ public class Calculations extends Dice
     public int numMaxSame(){
         //this one is short
         //return the variable numSame
+        return numSame;
     }
     
     public String StraightChecker()
