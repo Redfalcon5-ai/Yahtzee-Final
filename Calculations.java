@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class Calculations extends Dice
 {
@@ -284,7 +285,10 @@ public class Calculations extends Dice
         if(full.contains("66666")) {
             yahtzee = true;
         }
+        
+        return yahtzee;
     }
+    
     public int SumAll()
     {
         /*This method should add all of the dice together so that 
