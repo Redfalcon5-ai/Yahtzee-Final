@@ -359,6 +359,8 @@ public class Calculations extends Dice
         if (Temp.equals("55444")){
             fullHouse = true;
         }
+        
+        return fullHouse;
     }
     
     public boolean Yahtzee()
