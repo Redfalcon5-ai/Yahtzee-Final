@@ -30,7 +30,7 @@ public class Calculations extends Dice
     private boolean lgStraight = false;
     private boolean fullHouse = false;
     private boolean yahtzee = false;
-   
+    
     private int t1 = d1;
     private int t2 = d2;
     private int t3 = d3;
@@ -42,9 +42,9 @@ public class Calculations extends Dice
     private String temp3 = Integer.toString(t3);
     private String temp4 = Integer.toString(t4);
     private String temp5 = Integer.toString(t5);
+        
     
     private String full = temp1 + temp2 + temp3 + temp4 + temp5;
- 
     
     public int countSame()
     {
@@ -58,69 +58,69 @@ public class Calculations extends Dice
         and numSame (the number that appears the most times)
         Think about the coin flip tracker exercise*/
         // return the variable maxSame
-        if(d1 == 1) {
+        if(t1 == 1) {
             ones++;
-        } else if(d1 == 2) {
+        } else if(t1 == 2) {
             twos++;
-        } else if(d1 == 3) {
+        } else if(t1 == 3) {
             threes++;
-        } else if(d1 == 4) {
+        } else if(t1 == 4) {
             fours++;
-        } else if(d1 == 5) {
+        } else if(t1 == 5) {
             fives++;
-        } else if(d1 == 6) {
+        } else if(t1 == 6) {
             sixes++;
         }
-        if(d2 == 1) {
+        if(t2 == 1) {
             ones++;
-        } else if(d2 == 2) {
+        } else if(t2 == 2) {
             twos++;
-        } else if(d2 == 3) {
+        } else if(t2 == 3) {
             threes++;
-        } else if(d2 == 4) {
+        } else if(t2 == 4) {
             fours++;
-        } else if(d2 == 5) {
+        } else if(t2 == 5) {
             fives++;
-        } else if(d2 == 6) {
+        } else if(t2 == 6) {
             sixes++;
         }
-        if(d3 == 1) {
+        if(t3 == 1) {
             ones++;
-        } else if(d3 == 2) {
+        } else if(t3 == 2) {
             twos++;
-        } else if(d3 == 3) {
+        } else if(t3 == 3) {
             threes++;
-        } else if(d3 == 4) {
+        } else if(t3 == 4) {
             fours++;
-        } else if(d3 == 5) {
+        } else if(t3 == 5) {
             fives++;
-        } else if(d3 == 6) {
+        } else if(t3 == 6) {
             sixes++;
         }
-        if(d4 == 1) {
+        if(t4 == 1) {
             ones++;
-        } else if(d4 == 2) {
+        } else if(t4 == 2) {
             twos++;
-        } else if(d4 == 3) {
+        } else if(t4 == 3) {
             threes++;
-        } else if(d4 == 4) {
+        } else if(t4 == 4) {
             fours++;
-        } else if(d4 == 5) {
+        } else if(t4 == 5) {
             fives++;
-        } else if(d4 == 6) {
+        } else if(t4 == 6) {
             sixes++;
         }
-        if(d5 == 1) {
+        if(t5 == 1) {
             ones++;
-        } else if(d5 == 2) {
+        } else if(t5 == 2) {
             twos++;
-        } else if(d5 == 3) {
+        } else if(t5 == 3) {
             threes++;
-        } else if(d5 == 4) {
+        } else if(t5 == 4) {
             fours++;
-        } else if(d5 == 5) {
+        } else if(t5 == 5) {
             fives++;
-        } else if(d5 == 6) {
+        } else if(t5 == 6) {
             sixes++;
         }
         
@@ -204,6 +204,8 @@ public class Calculations extends Dice
         smS = second;
         
         return smS;
+     }
+        
     
     public boolean SmStraight()
     {   
@@ -250,9 +252,8 @@ public class Calculations extends Dice
         them to each other in the right order, you should be able to determine
         if the roll is a full house.*/
         //You should return the boolean fullHouse 
-        
-        
     }
+    
     public boolean Yahtzee()
     {
         /*A yahtzee is 5 of a kind.  
@@ -283,8 +284,6 @@ public class Calculations extends Dice
         if(full.contains("66666")) {
             yahtzee = true;
         }
-        
-        return yahtzee;
     }
     public int SumAll()
     {
@@ -319,7 +318,7 @@ public class Calculations extends Dice
         }
         
         if(t5 == 1) {
-            ones++
+            ones++;
         }
         return ones;
     }
@@ -346,7 +345,7 @@ public class Calculations extends Dice
         }
         
         if(t5 == 2) {
-            twos++
+            twos++;
         }
         return twos * 2;
     }
@@ -373,7 +372,7 @@ public class Calculations extends Dice
         }
         
         if(t5 == 3) {
-            threes++
+            threes++;
         }
         return threes * 3;
     }
@@ -401,7 +400,7 @@ public class Calculations extends Dice
         }
         
         if(t5 == 4) {
-            fours++
+            fours++;
         }
         return fours * 4;
     }
@@ -428,7 +427,7 @@ public class Calculations extends Dice
         }
         
         if(t5 == 5) {
-            fives++
+            fives++;
         }
         return fives * 5;
     }
@@ -455,7 +454,7 @@ public class Calculations extends Dice
         }
         
         if(t5 == 6) {
-            sixes++
+            sixes++;
         }
         return sixes * 6;
     }
@@ -499,7 +498,7 @@ public class Calculations extends Dice
         twos = 0;
         threes = 0;
         fours = 0;
-        fives = 0;
+        int fives = 0;
         sixes = 0;
         chance = 0;
         threeKind = 0;
