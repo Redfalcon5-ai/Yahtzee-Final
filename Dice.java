@@ -61,6 +61,14 @@ public class Dice  //this is the superClass at the top of the heiarchy
         if(a == 5){
             d5 = rand.nextInt(6)+1;
         }
+        
+        String a = "dice 1: " + d1 + "\n" +
+                   "dice 2: " + d2 + "\n" +
+                   "dice 3: " + d3 + "\n" +
+                   "dice 4: " + d4 + "\n" +
+                   "dice 5: " + d5 ; 
+        
+        return a; 
     }
      
     public String OrderRoll()
