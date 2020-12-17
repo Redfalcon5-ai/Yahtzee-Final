@@ -140,11 +140,11 @@ public class Calculations extends Dice
             maxSame = fours;
             numSame = 4;
         }
-        if(fives > ones && fives > twos &&  fives > three && fives > four && fives > sixes) {
+        if(fives > ones && fives > twos &&  fives > threes && fives > fours && fives > sixes) {
             maxSame = fives;
             numSame = 5;
         }
-        if(sixes > ones && sixes > twos &&  sixes > three && sixes > four && sixes > fives) {
+        if(sixes > ones && sixes > twos &&  sixes > threes && sixes > fours && sixes > fives) {
             maxSame = sixes;
             numSame = 6;
         }
@@ -222,7 +222,7 @@ public class Calculations extends Dice
             smStraight = true;
         }
         
-        if(full.contain("3456")) {
+        if(full.contains("3456")) {
             smStraight = true;
         }
         
