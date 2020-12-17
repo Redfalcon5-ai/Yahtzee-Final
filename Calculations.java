@@ -253,6 +253,112 @@ public class Calculations extends Dice
         them to each other in the right order, you should be able to determine
         if the roll is a full house.*/
         //You should return the boolean fullHouse 
+        
+        int temporaryNum;
+        
+        for (int count = 0; count < 4; count++)
+        {
+            if ( t2 < t1)
+            {
+               temporaryNum = t1;
+               t1 = t2;
+               t2 = temporaryNum;
+            }
+        
+            if ( t3 < t2)
+            {
+               temporaryNum = t2;
+               t2 = t3;
+               t3 = temporaryNum;
+            }
+        
+            if ( t4 < t3)
+            {
+               temporaryNum = t3;
+               t3 = t4;
+               t4 = temporaryNum;
+            }
+        
+            if ( t5 < t4)
+            {
+               temporaryNum = t4;
+               t4 = t5;
+               t5 = temporaryNum;
+            }
+        }
+        
+        String T1 = Integer.toString(t1);
+        String T2 = Integer.toString(t2);
+        String T3 = Integer.toString(t3);
+        String T4 = Integer.toString(t4);
+        String T5 = Integer.toString(t5);
+        
+        String Temp = T1 + T2 + T3 + T4 + T5;
+        
+        if (Temp.equals("11222")){
+            fullHouse = true;
+        }
+        if (Temp.equals("11333")){
+            fullHouse = true;
+        }
+        if (Temp.equals("11444")){
+            fullHouse = true;
+        }
+        if (Temp.equals("11555")){
+            fullHouse = true;
+        }
+        
+        if (Temp.equals("22111")){
+            fullHouse = true;
+        }
+        if (Temp.equals("22333")){
+            fullHouse = true;
+        }
+        if (Temp.equals("22444")){
+            fullHouse = true;
+        }
+        if (Temp.equals("22555")){
+            fullHouse = true;
+        }
+        
+        if (Temp.equals("33111")){
+            fullHouse = true;
+        }
+        if (Temp.equals("33222")){
+            fullHouse = true;
+        }
+        if (Temp.equals("33444")){
+            fullHouse = true;
+        }
+        if (Temp.equals("33555")){
+            fullHouse = true;
+        }
+        
+        if (Temp.equals("44111")){
+            fullHouse = true;
+        }
+        if (Temp.equals("44222")){
+            fullHouse = true;
+        }
+        if (Temp.equals("44333")){
+            fullHouse = true;
+        }
+        if (Temp.equals("44555")){
+            fullHouse = true;
+        }
+        
+        if (Temp.equals("55111")){
+            fullHouse = true;
+        }
+        if (Temp.equals("55222")){
+            fullHouse = true;
+        }
+        if (Temp.equals("55333")){
+            fullHouse = true;
+        }
+        if (Temp.equals("55444")){
+            fullHouse = true;
+        }
     }
     
     public boolean Yahtzee()
