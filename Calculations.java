@@ -478,6 +478,16 @@ public class Calculations extends Dice
         a zero */
         //Three of a kind should always be true if four of a kind is true and can be
         //used if four of a kind has already been used.
+        int r;
+        
+        if (countSame() >= 3){
+            r = SumAll();
+        }
+        else{
+            r = 0;
+        }
+        
+        return r;
     }
     
     public int getFourKind()
@@ -487,6 +497,17 @@ public class Calculations extends Dice
         It should tell you if you have 4 of a kind and if you do you should 
         return sumAll and if you don't and have to use this score it should return
         a zero */
+        int r;
+        
+        if (countSame() >= 4){
+            r = SumAll();
+        }
+        else{
+            r = 0;
+        }
+        
+        return r;
+        
     } 
     public String resetVariables()
     {
