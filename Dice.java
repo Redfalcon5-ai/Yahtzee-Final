@@ -30,11 +30,13 @@ public class Dice  //this is the superClass at the top of the heiarchy
         //dice 5: 5 (the fiveis an example and should just be the value of the die)
         //you may need to use escape sequences in your return statement to get the statement to go multiple lines
         
-        return "dice 1: " + d1 +
-               \n "dice 2: " + d2 +
-               \n "dice 3: " + d3 +
-               \n "dice 4: " + d4 +
-               \n "dice 5: " + d5 ;
+        String a = "dice 1: " + d1 \n +
+                   "dice 2: " + d2 \n +
+                   "dice 3: " + d3 \n +
+                   "dice 4: " + d4 \n +
+                   "dice 5: " + d5 ; 
+        
+        return a;
                
         
     }
@@ -116,11 +118,13 @@ public class Dice  //this is the superClass at the top of the heiarchy
         d4 = t4;
         d5 = t5;
         
-        return "dice 1: " + d1 +
-               \n "dice 2: " + d2 +
-               \n "dice 3: " + d3 +
-               \n "dice 4: " + d4 +
-               \n "dice 5: " + d5 ;
+        String a = "dice 1: " + d1 \n +
+                   "dice 2: " + d2 \n +
+                   "dice 3: " + d3 \n +
+                   "dice 4: " + d4 \n +
+                   "dice 5: " + d5 ; 
+        
+        return a;
         
     }
     
@@ -156,11 +160,13 @@ public class Dice  //this is the superClass at the top of the heiarchy
     
     public String toString()
     {
-        return "dice 1: " + d1 \n +
-               "dice 2: " + d2 \n +
-               "dice 3: " + d3 \n +
-               "dice 4: " + d4 \n +
-               "dice 5: " + d5 ; 
+        String a = "dice 1: " + d1 \n +
+                   "dice 2: " + d2 \n +
+                   "dice 3: " + d3 \n +
+                   "dice 4: " + d4 \n +
+                   "dice 5: " + d5 ; 
+        
+        return a; 
     }
     
 }
