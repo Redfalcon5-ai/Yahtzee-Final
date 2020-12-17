@@ -47,8 +47,8 @@ public class Score extends Calculations //make sure that this is a subclass of C
         System.out.println("press 11 to score this on the 4 of a Kind Category.");
         System.out.println("press 12 to score this on the Full House Category.");
         System.out.println("press 13 to score this on the Yahtzee Category.");
+        return menu;
     }   
-    
     public void setOnesScore(int a)
     {
         //This should pass in an integer that sets the score for the onesScore 
@@ -176,5 +176,6 @@ public class Score extends Calculations //make sure that this is a subclass of C
         {
             totalScore += yahtzeeScore;
         }
+        return totalScore;
     }
 }
