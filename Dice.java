@@ -68,7 +68,7 @@ public class Dice  //this is the superClass at the top of the heiarchy
                    "dice 4: " + d4 + "\n" +
                    "dice 5: " + d5 ; 
         
-        return a; 
+        return b; 
     }
      
     public String OrderRoll()
