@@ -1,4 +1,3 @@
-
 import java.util.*;
 public class Calculations extends Dice
 {
@@ -174,36 +173,36 @@ public class Calculations extends Dice
         what you use to check if a straight is true.
          // you will use the variables tempSS and smS in this method
          //you will return the String valuse of smS
-        */
+         */
         String first = temp1 + temp2 + temp3 + temp4 + temp5;
         String second = "";
-        
+
         if(first.contains("1") == true){
             second = second + '1';
         }
-        
+
         if(first.contains("2") == true){
             second = second + '2';
         }
-        
+
         if(first.contains("3") == true){
             second = second + '3';
         }
-        
+
         if(first.contains("4") == true){
             second = second + '4';
         }
-        
+
         if(first.contains("5") == true){
             second = second + '5';
         }
-        
+
         if(first.contains("6") == true){
             second = second + '6';
         }
         
         smS = second;
-        
+
         return smS;
      }
         
@@ -215,15 +214,8 @@ public class Calculations extends Dice
         and compare it to all of the small straight options
         and if it meets one of those small straight options 
         it should return true for the variable smStraight*/
-        if(full.contains("1234")) {
-            smStraight = true;
-        }
-        
-        if(full.contains("2345")) {
-            smStraight = true;
-        }
-        
-        if(full.contains("3456")) {
+        StraightChecker();
+        if(smS.contains("1234") || smS.contains("2345") || smS.contains("3456")) {
             smStraight = true;
         }
         
@@ -236,14 +228,10 @@ public class Calculations extends Dice
         and compare it to all of the Large straight options
         and if it meets one of those Large straight options 
         it should return true for the variable lgStraight*/
-        if(full.contains("12345")) {
+        StraightChecker();
+        if(smS.contains("12345") || smS.contains("23456")) {
             lgStraight = true;
         }
-        
-        if(full.contains("23456")) {
-            lgStraight = true;
-        }
-        
         return lgStraight;
     }
     public boolean FullHouseCheck()
@@ -253,111 +241,28 @@ public class Calculations extends Dice
         them to each other in the right order, you should be able to determine
         if the roll is a full house.*/
         //You should return the boolean fullHouse 
-        
-        int temporaryNum;
-        
-        for (int count = 0; count < 4; count++)
-        {
-            if ( t2 < t1)
-            {
-               temporaryNum = t1;
-               t1 = t2;
-               t2 = temporaryNum;
-            }
-        
-            if ( t3 < t2)
-            {
-               temporaryNum = t2;
-               t2 = t3;
-               t3 = temporaryNum;
-            }
-        
-            if ( t4 < t3)
-            {
-               temporaryNum = t3;
-               t3 = t4;
-               t4 = temporaryNum;
-            }
-        
-            if ( t5 < t4)
-            {
-               temporaryNum = t4;
-               t4 = t5;
-               t5 = temporaryNum;
-            }
+        boolean x = false;
+        if(t1 == t2 || t2 == t3 || t3 == t4 || t4 == t5) {
+            x = true;
+        } else {
+            x = false;
         }
         
-        String T1 = Integer.toString(t1);
-        String T2 = Integer.toString(t2);
-        String T3 = Integer.toString(t3);
-        String T4 = Integer.toString(t4);
-        String T5 = Integer.toString(t5);
-        
-        String Temp = T1 + T2 + T3 + T4 + T5;
-        
-        if (Temp.equals("11222")){
-            fullHouse = true;
-        }
-        if (Temp.equals("11333")){
-            fullHouse = true;
-        }
-        if (Temp.equals("11444")){
-            fullHouse = true;
-        }
-        if (Temp.equals("11555")){
-            fullHouse = true;
+        boolean y = false;
+        if((t1 == t2 && t2 == t3) || (t2 == t3 && t3 == t4) || (t3 == t4 && t4 == t5)) {
+            y = true;
+        } else {
+            y = false;
         }
         
-        if (Temp.equals("22111")){
-            fullHouse = true;
-        }
-        if (Temp.equals("22333")){
-            fullHouse = true;
-        }
-        if (Temp.equals("22444")){
-            fullHouse = true;
-        }
-        if (Temp.equals("22555")){
-            fullHouse = true;
+        if((t2 == t3 && t3 == t4) && (t1 != t4)) {
+            y = false;
         }
         
-        if (Temp.equals("33111")){
+        if(x == true && y == true) {
             fullHouse = true;
-        }
-        if (Temp.equals("33222")){
-            fullHouse = true;
-        }
-        if (Temp.equals("33444")){
-            fullHouse = true;
-        }
-        if (Temp.equals("33555")){
-            fullHouse = true;
-        }
-        
-        if (Temp.equals("44111")){
-            fullHouse = true;
-        }
-        if (Temp.equals("44222")){
-            fullHouse = true;
-        }
-        if (Temp.equals("44333")){
-            fullHouse = true;
-        }
-        if (Temp.equals("44555")){
-            fullHouse = true;
-        }
-        
-        if (Temp.equals("55111")){
-            fullHouse = true;
-        }
-        if (Temp.equals("55222")){
-            fullHouse = true;
-        }
-        if (Temp.equals("55333")){
-            fullHouse = true;
-        }
-        if (Temp.equals("55444")){
-            fullHouse = true;
+        } else {
+            fullHouse = false;
         }
         
         return fullHouse;
@@ -370,28 +275,11 @@ public class Calculations extends Dice
         them to each other in the right order, you should be able to determine
         if the roll is a yahtzee.*/
         //You should return the boolean yahtzee
-        if(full.contains("11111")) {
-            yahtzee = true;
-        }
         
-        if(full.contains("22222")) {
+        if(t1 == t2 && t1 == t3 && t1 == t4 && t1 == t5) {
             yahtzee = true;
-        }
-        
-        if(full.contains("33333")) {
-            yahtzee = true;
-        }
-        
-        if(full.contains("44444")) {
-            yahtzee = true;
-        }
-        
-        if(full.contains("55555")) {
-            yahtzee = true;
-        }
-        
-        if(full.contains("66666")) {
-            yahtzee = true;
+        } else {
+            yahtzee = false;
         }
         
         return yahtzee;
@@ -441,25 +329,25 @@ public class Calculations extends Dice
         and if it is you should add 2 to the twos variable.*/
         // You should return the int twos
         if(t1 == 2) {
-            twos++;
+            twos+=2;
         }
         
         if(t2 == 2) {
-            twos++;
+            twos+=2;
         }
         
         if(t3 == 2) {
-            twos++;
+            twos+=2;
         }
         
         if(t4 == 2) {
-            twos++;
+            twos+=2;
         }
         
         if(t5 == 2) {
-            twos++;
+            twos+=2;
         }
-        return twos * 2;
+        return twos;
     }
     public int getThrees()
     {
@@ -468,25 +356,25 @@ public class Calculations extends Dice
         and if it is you should add 3 to the threes variable.*/
         // You should return the int threes
         if(t1 == 3) {
-            threes++;
+            threes+=3;
         }
         
         if(t2 == 3) {
-            threes++;
+            threes+=3;
         }
         
         if(t3 == 3) {
-            threes++;
+            threes+=3;
         }
         
         if(t4 == 3) {
-            threes++;
+            threes+=3;
         }
         
         if(t5 == 3) {
-            threes++;
+            threes+=3;
         }
-        return threes * 3;
+        return threes;
     }
     
     public int getFours()
@@ -496,25 +384,25 @@ public class Calculations extends Dice
         and if it is you should add 4 to the Fours variable.*/
         // You should return the int Fours
         if(t1 == 4) {
-            fours++;
+            fours+=4;
         }
         
         if(t2 == 4) {
-            fours++;
+            fours+=4;
         }
         
         if(t3 == 4) {
-            fours++;
+            fours+=4;
         }
         
         if(t4 == 4) {
-            fours++;
+            fours+=4;
         }
         
         if(t5 == 4) {
-            fours++;
+            fours+=4;
         }
-        return fours * 4;
+        return fours;
     }
      public int getFives()
     {
@@ -523,25 +411,25 @@ public class Calculations extends Dice
         and if it is you should add 5 to the Fives variable.*/
         // You should return the int Fives
         if(t1 == 5) {
-            fives++;
+            fives+=5;
         }
         
         if(t2 == 5) {
-            fives++;
+            fives+=5;
         }
         
         if(t3 == 5) {
-            fives++;
+            fives+=5;
         }
         
         if(t4 == 5) {
-            fives++;
+            fives+=5;
         }
         
         if(t5 == 5) {
-            fives++;
+            fives+=5;
         }
-        return fives * 5;
+        return fives;
     }
     public int getSixes()
     {
@@ -550,25 +438,25 @@ public class Calculations extends Dice
         and if it is you should add 6 to the Sixes variable.*/
         // You should return the int Sixes
         if(t1 == 6) {
-            sixes++;
+            sixes+=6;
         }
         
         if(t2 == 6) {
-            sixes++;
+            sixes+=6;
         }
         
         if(t3 == 6) {
-            sixes++;
+            sixes+=6;
         }
         
         if(t4 == 6) {
-            sixes++;
+            sixes+=6;
         }
         
         if(t5 == 6) {
-            sixes++;
+            sixes+=6; 
         }
-        return sixes * 6;
+        return sixes;
     }
     
     public int getChance()
@@ -578,7 +466,7 @@ public class Calculations extends Dice
        misses going for a larger roll and has used up the socores that are in
        their roll so it simply adds up all of the dice and returns that.  luckly
        you already have this done and you simply need to return sumAll*/
-       return SumAll();
+       return sumAll;
     }
     
     public int getThreeKind()
@@ -590,16 +478,12 @@ public class Calculations extends Dice
         a zero */
         //Three of a kind should always be true if four of a kind is true and can be
         //used if four of a kind has already been used.
-        int r;
-        
-        if (countSame() >= 3){
-            r = SumAll();
+        countSame();
+        if(maxSame >= 3) {
+            return sumAll;
+        } else {
+            return 0;
         }
-        else{
-            r = 0;
-        }
-        
-        return r;
     }
     
     public int getFourKind()
@@ -609,16 +493,12 @@ public class Calculations extends Dice
         It should tell you if you have 4 of a kind and if you do you should 
         return sumAll and if you don't and have to use this score it should return
         a zero */
-        int r;
-        
-        if (countSame() >= 4){
-            r = SumAll();
+        countSame();
+        if(maxSame >= 4) {
+            return sumAll;
+        } else {
+            return 0;
         }
-        else{
-            r = 0;
-        }
-        
-        return r;
         
     } 
     public String resetVariables()
